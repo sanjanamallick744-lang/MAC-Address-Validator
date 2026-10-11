@@ -1,113 +1,75 @@
-# MAC Address Validator
+# MAC Address Validator in C++
 
-## 📌 Project Description
+## 📌 About the Project
+The **MAC Address Validator** is a simple C++ program that checks whether a given MAC address follows the correct format. It validates the address length, hexadecimal characters, and separator consistency.
 
-**MAC Address Validator** is a simple C++ console-based cybersecurity and networking project that checks whether a given MAC address follows a valid format.
-
-The program validates the MAC address by checking its length, hexadecimal characters, separators, and overall structure.
-
-## 🎯 Objectives
-
-* Validate MAC addresses entered by the user.
-* Check for valid hexadecimal characters.
-* Verify the correct MAC address length.
-* Support both `:` and `-` separators.
-* Practice C++ strings, functions, loops, and character validation.
-
-## ⚙️ Features
-
-* Simple console interface
-* Supports colon-separated MAC addresses
-* Supports hyphen-separated MAC addresses
-* Detects invalid characters
-* Detects incorrect length
-* Detects incorrect separators
-* Beginner-friendly C++ implementation
-
-## 💻 Example
-
-### Valid MAC Address
-
-```text
-00:1A:2B:3C:4D:5E
-```
-
-or
-
-```text
-AA-BB-CC-DD-EE-FF
-```
-
-### Invalid MAC Address
-
-```text
-00:1A:2B:3C:4D
-```
-
-```text
-00:1A:2B:3C:4D:ZZ
-```
+## ✨ Features
+- Validates MAC address format.
+- Supports colon (`:`) and hyphen (`-`) separators.
+- Checks hexadecimal characters (`0–9`, `A–F`, `a–f`).
+- Detects incorrect length and mixed separators.
+- Allows multiple addresses to be checked in one execution.
+- Displays clear validation results.
 
 ## 🛠️ Technologies Used
+- **Language:** C++
+- **Concepts:** Functions, loops, conditional statements, strings, and character validation.
 
-* **Language:** C++
-* **IDE:** Dev-C++
-* **Type:** Console Application
+## 📋 Valid MAC Address Formats
+- `00:1A:2B:3C:4D:5E`
+- `AA-BB-CC-DD-EE-FF`
 
-## 🧠 Concepts Used
+## ❌ Invalid Examples
+- `00:1A:2B:3C:4D` — Incorrect length.
+- `00:1A:2B:3C:4D:5G` — Invalid hexadecimal character.
+- `00:1A-2B:3C-4D:5E` — Mixed separators.
 
-* C++ Strings
-* Functions
-* Loops
-* Conditional Statements
-* Character Validation
-* Hexadecimal Values
-* Basic Networking Concepts
+## 🚀 How to Run
 
-## ▶️ How to Run
+1. Clone or download this repository.
+2. Open the `.cpp` file in Dev-C++, VS Code, or another C++ IDE.
+3. Compile and run the program.
 
-1. Open **Dev-C++**.
-2. Create a new C++ source file.
-3. Copy the program code into the file.
-4. Save it as:
+Using a terminal with a C++ compiler:
 
-```text
-mac_address_validator.cpp
+```bash
+g++ mac_validator.cpp -o mac_validator
 ```
 
-5. Compile the program.
-6. Run the program.
-7. Enter a MAC address when prompted.
+Run on Windows:
 
-## 📚 What I Learned
+```bash
+mac_validator.exe
+```
 
-Through this project, I learned how to:
+## 💻 Sample Output
 
-* Validate structured input using C++.
-* Work with strings and individual characters.
-* Check hexadecimal characters.
-* Use functions to organize program logic.
-* Apply basic computer networking concepts in a C++ program.
+```text
+=====================================
+        MAC ADDRESS VALIDATOR
+=====================================
+Enter MAC Address: 00:1A:2B:3C:4D:5E
 
-## 🔐 Cybersecurity Relevance
+-------------------------------------
+          VALIDATION RESULT
+-------------------------------------
+MAC Address : 00:1A:2B:3C:4D:5E
+Status      : VALID
+Message     : Correct MAC address format.
+-------------------------------------
+```
 
-MAC addresses are commonly used in networking to identify network interfaces. Validating their format is a basic networking and cybersecurity task and can be useful when processing network-related data.
+## 🎯 Learning Objectives
+- Understand MAC address formatting.
+- Practice string manipulation in C++.
+- Apply conditional statements and loops.
+- Develop basic input-validation skills.
 
-## 🚀 Future Improvements
-
-Possible future enhancements include:
-
-* Detecting **unicast and multicast** MAC addresses.
-* Detecting **locally administered** MAC addresses.
-* Identifying the vendor using an **OUI database**.
-* Adding a graphical interface.
-* Adding batch validation for multiple MAC addresses.
+## ⚠️ Limitation
+This program checks the **format** of a MAC address only. It does not verify the device, manufacturer, or network activity associated with the address.
 
 ## 👩‍💻 Author
+Sanjana Mallick
 
-**Sanjana Mallick**
-
-B.Tech CSIT – Cybersecurity
-Symbiosis Skills & Professional University
-
-
+## 📄 License
+This project is open-source and available for educational purposes.
